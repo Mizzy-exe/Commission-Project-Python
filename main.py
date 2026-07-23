@@ -1,16 +1,20 @@
 import config
+import arquivo
+import comissao
 
 print('*' * 40)
 print('BEM-VINDO AO SISTEMA DE COMISSÕES')
 print('*' * 40)
 
 dados = config.config_artista()
-config.salvar_config(dados)
-config.carregar_config()
+arquivo.salvar_config(dados)
+arquivo.carregar_config()
 
 while True:
     opcao = config.tabela_esc()
-    config.extra_comm(opcao)
+    registro = comissao.extra_comm(opcao)
+    print(f'Comissão registrada em {registro}')
+    print()
     
     continuar = input('Deseja registrar outra comissão? [S/N]: ').strip().capitalize()
 
