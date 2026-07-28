@@ -14,6 +14,7 @@ def carregar_config():                                                  # Mostra
             print(f"Configuração carregada com sucesso!")
             print(f"Nome: {dados_artista['nome']}\nNome Artístico: {dados_artista['nome_artistico']}")
             return dados_artista
+        
     except FileNotFoundError:
         print('Arquivo de configuração não encontrado. Por favor, configure o artista primeiro.')
         return None

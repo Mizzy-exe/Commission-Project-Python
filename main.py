@@ -12,7 +12,8 @@ arquivo.carregar_config()
 
 while True:
     opcao = config.tabela_esc()
-    registro = comissao.extra_comm(opcao)
+    registro = comissao.extra(opcao)
+
     print(f'Comissão registrada em {registro}')
     print()
     
