@@ -8,7 +8,7 @@ Auxiliar artistas a gerenciar suas comissões.
 
 ## Tecnologias
 
-- Pithon
+- Python
 - Json
 
 ## Status
