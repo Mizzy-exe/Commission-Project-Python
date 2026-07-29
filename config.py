@@ -69,7 +69,7 @@ def tabela_esc():
         if 1 <= esc_comm <= len(commission):
             opcao_escolhida = commission[esc_comm - 1]
             print(f'O(a) {client} escolheu {opcao_escolhida['tamanho']}, {opcao_escolhida['tipo']} por R${opcao_escolhida['brl']:.2f}')
-
+            print()
             confirm = input('Tem certeza: [S/N] ').strip().capitalize()
 
             if confirm == 'S':

@@ -21,6 +21,8 @@ def extra(opc):                                                  # Pergunta se o
         else:
             print(f'Tudo bem, sem {c}')
 
+        print(f'\n{extras}')
+
     calculo_extra(opc, extras)
     final = input('Essa comissão foi finalizada? [S/N]: ').upper().strip()
     print()
