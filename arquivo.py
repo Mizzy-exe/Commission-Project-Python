@@ -6,14 +6,14 @@ def salvar_config(dados):                                   # Salva em Json
         json.dump(dados, arquivo, indent=4, ensure_ascii=False)
 
 
-def exibir_json():                                                  # Mostra o que está salvo no dict
+def exibir_json(arqui):                                                  # Mostra o que está salvo no dict
     try:
-        with open('clientes.json', 'r', encoding='utf-8') as arquivo:
+        with open('arqui', 'r', encoding='utf-8') as arquivo:
             dados = json.load(arquivo)
             print()
 
         print("-------------------------------------")
-        print(f'EXIBINDO ARQUIVO: {'clientes.json'}')
+        print(f'EXIBINDO ARQUIVO: {'arqui'}')
         print("-------------------------------------")
 
         if not dados:                   # Se o arquivo estiver vazio

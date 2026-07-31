@@ -21,15 +21,18 @@ def config_artista():                            # Pego nome real e artístico d
 
     if resposta == 'S':
         print()
-        nome_artistico = input('>>>> Qual é seu nome artístico? ').strip().capitalize()
-        print(f'Perfeito. Vamos continuar com seu nome artístico: {nome_artistico}')
+        nome_artistico = input('>>>> Digite seu nome artistico: ').strip().capitalize()
+        print(f'Perfeito. Vamos continuar, {nome_artistico}')
     else:
-        print('Tudo bem. Então vamos continuar com seu nome real.')
+        print(f'Okay, vamos continuar {nome}')
         nome_artistico = nome
+
+    idade = int(input('Idade: '))
 
     dados_artista['nome'] = nome
     dados_artista['nome_artistico'] = nome_artistico
-
+    dados_artista['idade'] = idade
+    
     return dados_artista
         
 
