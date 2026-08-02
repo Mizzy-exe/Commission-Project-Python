@@ -1,4 +1,4 @@
-# Commission Project
+# BlueArt Manager
 
 > Sistema de gerenciamento de comissões para artistas digitais.
 
@@ -6,9 +6,9 @@
 
 ## Sobre
 
-O Commission Project é um sistema desenvolvido em Python para auxiliar artistas que trabalham com comissões.
+O BlueArt Manager é um sistema desenvolvido em Python para auxiliar artistas que trabalham com comissões.
 A ideia surgiu da necessidade de organizar clientes, pedidos e valores de forma simples enquanto continuo aprendendo programação.
-Além de ser uma ferramentaa pessoal, este projeto representa minha evolução como desenvolvedora.
+Além de ser uma ferramenta pessoal, este projeto representa minha evolução como desenvolvedora.
 
 ---
 
