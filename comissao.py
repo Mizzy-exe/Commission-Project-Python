@@ -2,7 +2,7 @@ from time import sleep
 import config
 
 def extra(opc):                                                  # Pergunta se o cliente quer mais alguma coisa na ilustração
-    print('INFORMAÇÕES EXTRAS DA COMISSÃO')
+    print('INFORMAÇÕES EXTRAS DA COMISSÃO')                         # adicionais, como armas, fundo detalhado, animal, etc
     print('-' * 40)
 
     lista = ['Personagem', 'Fundo detalhado', 'Armas', 'Animal']
@@ -23,7 +23,7 @@ def extra(opc):                                                  # Pergunta se o
 
         print(f'\n{extras}')
 
-    calculo_extra(opc, extras)
+    calculo_extra(opc, extras)                         # chama a função de calculo_extra para calcular o valor total da comissão
     final = input('Essa comissão foi finalizada? [S/N]: ').upper().strip()
     print()
 
@@ -32,7 +32,7 @@ def extra(opc):                                                  # Pergunta se o
         return registro
     else:
         print('ainda em desenvolvimento a partir daqui!')
-        return None
+        return None                                         # return None para caso o cliente não finalize a comissão, para não dar erro no main.py
 
 
 def calculo_extra(escolha, itm):                       #itm é item, eu so fiquei sem ideia para nome do parametro

@@ -1,8 +1,10 @@
 import json
 import os
+from time import sleep
+import arquivo
 
 def add_cliente():
-    if os.path.exists('clientes.json'):
+    if os.path.exists('clientes.json'):                                 # checa se o arquivo clientes.json existe
         with open('clientes.json', 'r', encoding='utf-8') as arquivo:
             clientes = json.load(arquivo)
         print(f'--- Arquivo encontrado! {len(clientes)} clientes carregados. ---')
@@ -10,7 +12,8 @@ def add_cliente():
         clientes = {}
         print('--- Nenhum arquivo encontrado. Criando nova lista. ---')
 
-    while True:
+    while True:                                                         #loop para adicionar clientes
+        print()
         print('\n--- ADICIONAR NOVO CLIENTE ---')
         nome = input('Nome do cliente (ou "sair"): ').capitalize().strip()
 
@@ -34,11 +37,30 @@ def add_cliente():
             'idade': idade,
             'celular': celular,
             'email': email,
-            'cidade': cidade,
-           
+            'cidade': cidade,   
         }
 
-        with open('clientes.json', 'w', encoding='utf-8') as arquivo:
+        with open('clientes.json', 'w', encoding='utf-8') as arquivo:                  # faz a atualização do arquivo clientes.json com os novos dados
                 json.dump(clientes, arquivo, indent=4, ensure_ascii=False)
 
         print('\nArquivo atualizado com sucesso!')
+        print()
+        print('--- Cliente adicionado ---')
+        print(f'Agora temos {len(clientes)} clientes cadastrados.')
+        return clientes
+        
+
+def listar_clientes(clientes):                              # lista todos os clientes cadastrados no arquivo clientes.json
+    print('\n--- LISTA DE CLIENTES ---')
+
+    dicionario = arquivo.json_simples(clientes)
+
+    for nome, info in dicionario.items():
+        print(f'Nome: {nome}')
+        print(f'Sexo: {info["sexo"]}')
+        print(f'Idade: {info["idade"]}')
+        print(f'Celular: {info["celular"]}')
+        print(f'Email: {info["email"]}')
+        print(f'Cidade: {info["cidade"]}')
+        print('-' * 30)
+

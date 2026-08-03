@@ -89,5 +89,5 @@ def tabela_esc():
 
 def data_hora():
     agora = datetime.now()
-    return agora.strftime('%d/%m/%Y %H:%M')
+    return agora.strftime('%d/%m/%Y %H:%M')             # diz a data e hora do registro da comissão
 

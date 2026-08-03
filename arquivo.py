@@ -36,4 +36,9 @@ def exibir_json(arqui):                                                  # Mostr
     except json.JSONDecodeError:
         print('[ERRO]: O arquivo não é um JSON válido ou está corrompido.')
         return None
-    
+
+
+def json_simples(nome_arquivo):                          # Salva em Json de forma simples, sem indentação
+    with open(nome_arquivo, 'r', encoding='utf-8') as arquivo:
+        dicio = json.load(arquivo)
+        return dicio
